@@ -1,0 +1,15 @@
+[submodule "vendor/FlatUIKit"]
+	path = vendor/FlatUIKit
+	url = git://github.com/Grouper/FlatUIKit.git
+[submodule "vendor/MAKVO"]
+	path = vendor/MAKVO
+	url = git://github.com/mikeash/MAKVONotificationCenter.git
+[submodule "vendor/TouchMXL"]
+	path = vendor/TouchMXL
+	url = git://github.com/TouchCode/TouchXML.git
+[submodule "vendor/UIView-Glow"]
+	path = vendor/UIView-Glow
+	url = git://github.com/thesecretlab/UIView-Glow.git
+[submodule "sskeychain"]
+	path = sskeychain
+	url = git://github.com/soffes/sskeychain.git
