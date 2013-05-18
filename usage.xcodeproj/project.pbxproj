@@ -34,6 +34,8 @@
 		403E93561745755900E258DB /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 403E93541745755900E258DB /* SSKeychainQuery.m */; };
 		403E93581745757400E258DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403E93571745757400E258DB /* Security.framework */; };
 		40C624B9172DB0E8002CE874 /* MLTMobileUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C624B8172DB0E8002CE874 /* MLTMobileUsage.m */; };
+		40DD61491747B27600315F19 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 40DD61481747B27600315F19 /* icon_57.png */; };
+		40DD614B1747B2CC00315F19 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 40DD614A1747B2CC00315F19 /* icon_114.png */; };
 		40DE21F11725A84000225E5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DE21F01725A84000225E5A /* UIKit.framework */; };
 		40DE21F31725A84000225E5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DE21F21725A84000225E5A /* Foundation.framework */; };
 		40DE21F51725A84000225E5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DE21F41725A84000225E5A /* CoreGraphics.framework */; };
@@ -46,7 +48,6 @@
 		40DE220A1725A84100225E5A /* MLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DE22091725A84100225E5A /* MLMainViewController.m */; };
 		40DE220D1725A84100225E5A /* MLFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DE220C1725A84100225E5A /* MLFlipsideViewController.m */; };
 		40DE22101725A84100225E5A /* MLMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DE220E1725A84100225E5A /* MLMainViewController_iPhone.xib */; };
-		40DE22131725A84100225E5A /* MLMainViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DE22111725A84100225E5A /* MLMainViewController_iPad.xib */; };
 		40DE22161725A84100225E5A /* MLFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DE22141725A84100225E5A /* MLFlipsideViewController.xib */; };
 		40DE221E1725A84100225E5A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DE221D1725A84100225E5A /* SenTestingKit.framework */; };
 		40DE221F1725A84100225E5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DE21F01725A84000225E5A /* UIKit.framework */; };
@@ -141,6 +142,8 @@
 		403E93571745757400E258DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		40C624B7172DB0E8002CE874 /* MLTMobileUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTMobileUsage.h; sourceTree = "<group>"; };
 		40C624B8172DB0E8002CE874 /* MLTMobileUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTMobileUsage.m; sourceTree = "<group>"; };
+		40DD61481747B27600315F19 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
+		40DD614A1747B2CC00315F19 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		40DE21ED1725A84000225E5A /* usage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = usage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DE21F01725A84000225E5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		40DE21F21725A84000225E5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,7 +162,6 @@
 		40DE220B1725A84100225E5A /* MLFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLFlipsideViewController.h; sourceTree = "<group>"; };
 		40DE220C1725A84100225E5A /* MLFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLFlipsideViewController.m; sourceTree = "<group>"; };
 		40DE220F1725A84100225E5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MLMainViewController_iPhone.xib; sourceTree = "<group>"; };
-		40DE22121725A84100225E5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MLMainViewController_iPad.xib; sourceTree = "<group>"; };
 		40DE22151725A84100225E5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MLFlipsideViewController.xib; sourceTree = "<group>"; };
 		40DE221C1725A84100225E5A /* usageTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = usageTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DE221D1725A84100225E5A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -304,6 +306,8 @@
 		40DE21E41725A84000225E5A = {
 			isa = PBXGroup;
 			children = (
+				40DD614A1747B2CC00315F19 /* icon_114.png */,
+				40DD61481747B27600315F19 /* icon_57.png */,
 				40DE22A01725B5BE00225E5A /* vendor */,
 				40DE21F61725A84000225E5A /* usage */,
 				40DE22231725A84100225E5A /* usageTests */,
@@ -347,7 +351,6 @@
 				40DE220B1725A84100225E5A /* MLFlipsideViewController.h */,
 				40DE220C1725A84100225E5A /* MLFlipsideViewController.m */,
 				40DE220E1725A84100225E5A /* MLMainViewController_iPhone.xib */,
-				40DE22111725A84100225E5A /* MLMainViewController_iPad.xib */,
 				40DE22141725A84100225E5A /* MLFlipsideViewController.xib */,
 				40DE21F71725A84000225E5A /* Supporting Files */,
 				40C624B7172DB0E8002CE874 /* MLTMobileUsage.h */,
@@ -541,7 +544,6 @@
 				40DE22051725A84100225E5A /* Default@2x.png in Resources */,
 				40DE22071725A84100225E5A /* Default-568h@2x.png in Resources */,
 				40DE22101725A84100225E5A /* MLMainViewController_iPhone.xib in Resources */,
-				40DE22131725A84100225E5A /* MLMainViewController_iPad.xib in Resources */,
 				40DE22161725A84100225E5A /* MLFlipsideViewController.xib in Resources */,
 				401D0C6D1744CECD00DC0A53 /* Lato-Black.ttf in Resources */,
 				401D0C6E1744CECD00DC0A53 /* Lato-BlackItalic.ttf in Resources */,
@@ -554,6 +556,8 @@
 				401D0C751744CECD00DC0A53 /* Lato-LightItalic.ttf in Resources */,
 				401D0C761744CECD00DC0A53 /* Lato-Regular.ttf in Resources */,
 				40F6D1E917469A350085BFFE /* Settings.bundle in Resources */,
+				40DD61491747B27600315F19 /* icon_57.png in Resources */,
+				40DD614B1747B2CC00315F19 /* icon_114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,14 +676,6 @@
 			name = MLMainViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		40DE22111725A84100225E5A /* MLMainViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40DE22121725A84100225E5A /* en */,
-			);
-			name = MLMainViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
 		40DE22141725A84100225E5A /* MLFlipsideViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -770,6 +766,7 @@
 				INFOPLIST_FILE = "usage/usage-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E1A47916-D49E-4B89-A389-C32F2A31D167";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -783,6 +780,7 @@
 				INFOPLIST_FILE = "usage/usage-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E1A47916-D49E-4B89-A389-C32F2A31D167";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
