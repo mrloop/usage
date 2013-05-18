@@ -10,6 +10,6 @@
 [submodule "vendor/UIView-Glow"]
 	path = vendor/UIView-Glow
 	url = git://github.com/thesecretlab/UIView-Glow.git
-[submodule "sskeychain"]
-	path = sskeychain
+[submodule "vendor/sskeychain"]
+	path = vendor/sskeychain
 	url = git://github.com/soffes/sskeychain.git
