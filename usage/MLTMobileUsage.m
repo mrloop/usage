@@ -11,11 +11,11 @@
 
 NSString * const SERVICE_NAME = @"tmobile_usage";
 
-static NSString * const kMLTMobileUsageURLString = @"https://www.t-mobile.co.uk/service/your-account/mtm-user-login-dispatch/";
+static NSString * const kMLTMobileUsageURLString = @"https://my.ee.co.uk/your-account/login/?site=tm";
 static NSString * const kMLTMobileUsageUseURLString = @"https://www.t-mobile.co.uk/service/your-account/private/mtm-view-recent-use/";
 static NSString * const kMLTMobileUsageHomeURLString = @"https://www.t-mobile.co.uk/service/your-account/private/home/";
 static NSString * const kMLTMobileUsageWaitURLString = @"https://www.t-mobile.co.uk/service/your-account/private/mtm-wait-recent-use/";
-static NSString * const kMLTMobileUsageLoginFailureURLString = @"https://www.t-mobile.co.uk/service/your-account/login/";
+static NSString * const kMLTMobileUsageLoginPostURLString = @"https://www.t-mobile.co.uk/service/your-account/login/";
 
 @implementation MLTMobileUsage
 
@@ -64,7 +64,13 @@ UIWebView* _webView;
   NSLog(@"%@",webView.request.mainDocumentURL.absoluteString);
   NSString *currentURL = [webView stringByEvaluatingJavaScriptFromString:@"window.location.href"];
   NSLog(@"%@", currentURL);
-  if ([webView.request.mainDocumentURL.absoluteString isEqualToString:kMLTMobileUsageURLString]){
+  if([webView.request.mainDocumentURL.query rangeOfString:@"errMsg"].length > 0 ){
+    if([self loginFailure]){
+      [self setValue:[NSNumber numberWithBool: NO] forKey:@"refreshing"];
+      [self setValue:[NSNumber numberWithBool: NO] forKey:@"validCredentials"];
+      [self setValue:@"Invalid Details" forKey:@"statusMessage"];
+    }
+  }else if ([webView.request.mainDocumentURL.absoluteString isEqualToString:kMLTMobileUsageURLString]){
     [self login];
     
   }else if([webView.request.mainDocumentURL.absoluteString isEqualToString:kMLTMobileUsageHomeURLString]){//logged in
@@ -81,12 +87,6 @@ UIWebView* _webView;
     [self setValue:[NSNumber numberWithBool: NO] forKey:@"refreshing"];
     [self setValue:@"Valid Details" forKey:@"statusMessage"];
     
-  }else if([webView.request.mainDocumentURL.absoluteString isEqualToString:kMLTMobileUsageLoginFailureURLString]){//l
-    if([self loginFailure]){
-      [self setValue:[NSNumber numberWithBool: NO] forKey:@"refreshing"];
-      [self setValue:[NSNumber numberWithBool: NO] forKey:@"validCredentials"];
-      [self setValue:@"Invalid Details" forKey:@"statusMessage"];
-    }
   }
 }
 
@@ -115,11 +115,14 @@ UIWebView* _webView;
     NSDictionary* result = [accounts objectAtIndex:0];
     NSString* username = [result objectForKey:kSSKeychainAccountKey];
     NSString* password = [SSKeychain passwordForService:SERVICE_NAME account:username];
+    
     NSString *loginScript = [NSString stringWithFormat:@"\
-                             document.getElementById('username').value='%@';\
-                             document.getElementById('password').value='%@';\
-                             document.getElementById('mtm-login-btn').click();",
-                             username, password];
+                             document.evaluate(\"//form[@action='%@']//input[@name='username']\", document, null, XPathResult.ANY_TYPE, null).iterateNext().value='%@';\
+                             document.evaluate(\"//form[@action='%@']//input[@name='password']\", document, null, XPathResult.ANY_TYPE, null).iterateNext().value='%@';\
+                             document.evaluate(\"//form[@action='%@']//input[@type='submit']\", document, null, XPathResult.ANY_TYPE, null).iterateNext().click();",
+                             kMLTMobileUsageLoginPostURLString, username,
+                             kMLTMobileUsageLoginPostURLString, password,
+                             kMLTMobileUsageLoginPostURLString];
     [_webView stringByEvaluatingJavaScriptFromString:loginScript];
   }else{
     [self setValue:[NSNumber numberWithBool: NO] forKey:@"refreshing"];
